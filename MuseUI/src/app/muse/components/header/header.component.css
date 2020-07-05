@@ -1,0 +1,51 @@
+.block_container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.applicationName{
+    font-size: 100%;
+}
+
+.userName{
+	font-size: 100%;
+    font-style: italic;
+    padding-left: 60vw;
+}
+
+.mat-toolbar{
+  height: 10vh;
+}
+
+div {
+    overflow: inherit;
+}
+
+.mat-sidenav-container{
+	background-color: #fff;
+	min-height: 9vh !important;
+}
+
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+}
+
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }

@@ -1,0 +1,43 @@
+<mat-card class="example-card">
+    <mat-card-header class="header">
+        <mat-card-title>{{job && job.company.name | uppercase}}</mat-card-title>
+        <mat-card-title>{{job && job.name}}</mat-card-title>
+        <mat-card-subtitle class="mat-card-subtitle">
+            <mat-icon *ngIf="job && job.isFavorite">favorite</mat-icon>
+            <mat-icon *ngIf="job && job.bookmark">bookmark</mat-icon>{{job && job.bookmark}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="content">
+        <p><b>THIS JOB IS IN</b></p>
+        <p>{{job && job.locations}}</p>
+    </mat-card-content>
+
+    <mat-card-actions class="button">
+        <button mat-mini-fab class="addbutton" *ngIf="!wishData" (click)="addButtonClick(job)" matTooltip="Add to wish list">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        </button>
+        <button mat-mini-fab class="deletebutton" *ngIf="wishData" (click)="deleteButton(job)" matTooltip="Delete from wish list">
+            <mat-icon>
+                <i class="material-icons">
+                    delete
+                </i>
+            </mat-icon>
+        </button>
+        <button mat-mini-fab class="mat-fab" matTooltip="View Job details">
+            <mat-icon>
+                <a *ngIf="job && job.url" [href]="job.url" target="_blank">
+                    <i class="material-icons">View Job details</i>
+                </a>
+            </mat-icon>
+        </button>
+        <button mat-mini-fab class="updatebutton" (click)="addBookmark(job)" matTooltip="Update bookmark">
+            <mat-icon>
+                <i class="material-icons">
+                    bookmark
+                </i>
+            </mat-icon>
+        </button>
+
+    </mat-card-actions>
+</mat-card>

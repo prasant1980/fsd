@@ -1,0 +1,12 @@
+<div mat-dialog-content>
+    <mat-form-field>
+        <p>Enter the Bookmark</p>
+        <textarea class="matInput" matInput [(ngModel)]="bookmark">
+        </textarea>
+    </mat-form-field>
+    <div mat-dialog-actions>
+        <button class="updateCommentDemo" mat-button color=warn (click)="updateBookmark()" matTooltip="Add bookmark">Add/Update</button>
+        <button class="updateCommentDemo" mat-button color=warn (click)="onClose()" matTooltip="Cancel">Cancel</button>
+    </div>
+
+</div>

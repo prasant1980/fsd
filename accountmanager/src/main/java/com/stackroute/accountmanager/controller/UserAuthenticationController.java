@@ -218,7 +218,7 @@ public class UserAuthenticationController {
 		// Builds the JWT and serializes it to a compact, URL-safe string
 		return Jwts.builder().setSubject(username).setIssuedAt(new Date())
 				.setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-				.signWith(SignatureAlgorithm.HS256, "secretkey").compact();
+				.signWith(SignatureAlgorithm.HS256, "musekey").compact();
 	}
 
 }

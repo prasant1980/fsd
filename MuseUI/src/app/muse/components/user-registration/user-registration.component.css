@@ -1,0 +1,51 @@
+.user-registration .registration-form {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    margin-left: 30%;
+
+}
+
+.user-registration form{
+    border: 1px solid #bbb;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+.user-registration .error-message {
+    color: #f00;
+    font-size: 0.85em;
+}
+
+.user-registration mat-form-field {
+    display: block;
+}
+
+.user-registration .input-field {
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+.user-registration .button-section {
+    margin-top: 20px;
+}
+
+.user-registration .button-section .cancel-button {
+    margin-left: 5%;
+}
+
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-size: 0.85em;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}

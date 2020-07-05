@@ -2,14 +2,16 @@ package com.stackroute.accountmanager.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import org.springframework.data.annotation.Id;
 
 @Entity
 public class User {
 
 	@Id
+	@Column(length = 20)
 	private String userId;
 	private String firstName;
 	private String lastName;

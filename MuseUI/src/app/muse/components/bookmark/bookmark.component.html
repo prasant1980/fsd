@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div>
+    <mat-paginator [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = OnPageChange($event)">
+    </mat-paginator>
+</div>
+
+<div class="container">
+    <app-card *ngFor = 'let job of pagedList'
+        [job]='job'
+        [bookmarkData]='bookmarkData'
+        [showbookmarkData]='showbookmarkData'
+        (updateBookmark)='updateBookmark($event)'
+        (addToWishList)='addToWishList($event)'
+    >
+    </app-card>
+</div>  

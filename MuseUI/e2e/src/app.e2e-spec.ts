@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to MuseUI!');
+    expect(page.getTitleText()).toContain('Prasant.Nayak@cognizant.com');
   });
 
   afterEach(async () => {

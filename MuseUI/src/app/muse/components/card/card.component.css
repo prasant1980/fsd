@@ -1,0 +1,74 @@
+.example-card{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    width: 92vw;
+    margin: 1em;
+    text-align: left;
+    margin-top: auto;
+    background-color: #F0F3F4;
+
+}
+
+.header{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+    text-align: left;
+    color: #474545;
+    width: 60%;
+}
+
+.mat-card-title {
+    font-size: 2vh;
+    font-weight: 200;
+}
+.mat-card-subtitle{
+    color: #474545;
+    font-size: 1.5vh;
+}
+
+mat-card-subtitle mat-icon {
+    color: #FF4181;
+    font-size: 3.5vh;
+    height: 1vh;
+    width: 2vw;
+}
+
+.content{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: auto;
+    text-align: left;
+    color: #474545;
+    width: 20%;
+}
+
+.image{
+    height: 25vh;
+    width: 15vw;
+    margin: auto;
+}
+
+@media (max-width: 880px) {
+    .image{
+        width: 200px !important;
+    }
+    .example-card{
+        width: 250px !important;
+    }
+}
+
+.mat-icons{
+    color: #fff;
+    height: 1vh;
+    width: 1vw;
+}
+
+.material-icons{
+    color: #fff;
+}
+
+.mat-fab.mat-accent,.mat-flat-button.mat-accent,.mat-mini-fab.mat-accent,.mat-raised-button.mat-accent{
+    background-color: #FF4181;
+    margin-left: 10px;
+}
+

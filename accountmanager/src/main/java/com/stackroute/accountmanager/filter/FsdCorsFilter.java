@@ -37,16 +37,16 @@ public class FsdCorsFilter extends GenericFilterBean {
 //			response.setStatus(HttpServletResponse.SC_OK);
 			response.setStatus(HttpServletResponse.SC_ACCEPTED);
 			log.info("Giing to Filter chain : " + request);
-			chain.doFilter(request, response);
-		} else {
-			if (null == authHeader || !authHeader.startsWith("Bearer")) {
-				throw new ServletException("Missing or invalid Authorization header");
-			}
-
-			final String token = authHeader.substring(7);
-			final Claims claims = Jwts.parser().setSigningKey("keepnote").parseClaimsJws(token).getBody();
-			request.setAttribute("claims", claims);
-			chain.doFilter(request, response);
-		}
+		} /*
+			 * else {
+			 * 
+			 * if (null == authHeader || !authHeader.startsWith("Bearer")) { throw new
+			 * ServletException("Missing or invalid Authorization header"); }
+			 * 
+			 * final String token = authHeader.substring(7); final Claims claims =
+			 * Jwts.parser().setSigningKey("musekey").parseClaimsJws(token).getBody();
+			 * request.setAttribute("claims", claims); chain.doFilter(request, response); }
+			 */
+		chain.doFilter(request, response);
 	}
 }

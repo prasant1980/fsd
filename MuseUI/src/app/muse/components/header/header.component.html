@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-toolbar color="accent">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="block_container">
+      <div>
+        <a mat-button>
+          <span class="applicationName">Muse Job Portal</span>
+        </a>
+      </div>
+      <div>
+        <span class="userName" *ngIf="isLoggedIn$ | async as isLoggedIn">
+          Welcome {{userName | uppercase}}
+        </span>
+      </div>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav color="accent" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+         <a mat-button *ngIf="isLoggedIn$ | async as isLoggedIn" (click)="onDashBoard()">DashBoard</a>
+      <a mat-button *ngIf="isLoggedIn$ | async as isLoggedIn" (click)="onWishList()">Favorites</a>
+      <a mat-button *ngIf="isLoggedIn$ | async as isLoggedIn" (click)="onBookMark()">Bookmarks</a>
+      <a mat-button *ngIf="isLoggedIn$ | async as isLoggedIn" (click)="onLogout()">Logout</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
